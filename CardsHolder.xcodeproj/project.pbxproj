@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490EB31823FEC26800055B0C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EB31723FEC26800055B0C /* UIColor+Extension.swift */; };
+		490EB31B23FEC33400055B0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490EB31923FEC33400055B0C /* LaunchScreen.storyboard */; };
+		490EB31D23FECDE400055B0C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EB31C23FECDE400055B0C /* ProfileViewController.swift */; };
+		490EB32123FECFCD00055B0C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EB32023FECFCD00055B0C /* CardView.swift */; };
 		4917F54323FDC482001DDC5C /* CardsHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4917F54223FDC482001DDC5C /* CardsHolderViewController.swift */; };
 		4917F54523FDC490001DDC5C /* CardsHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4917F54423FDC490001DDC5C /* CardsHolderView.swift */; };
 		4995286B23FDBA6900AE64D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995286A23FDBA6900AE64D7 /* AppDelegate.swift */; };
 		4995287423FDBA6C00AE64D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4995287323FDBA6C00AE64D7 /* Assets.xcassets */; };
-		4995287723FDBA6C00AE64D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4995287523FDBA6C00AE64D7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		490EB31723FEC26800055B0C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		490EB31A23FEC33400055B0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CardsHolder/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		490EB31C23FECDE400055B0C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		490EB32023FECFCD00055B0C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4917F54223FDC482001DDC5C /* CardsHolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsHolderViewController.swift; sourceTree = "<group>"; };
 		4917F54423FDC490001DDC5C /* CardsHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsHolderView.swift; sourceTree = "<group>"; };
 		4995286723FDBA6900AE64D7 /* CardsHolder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardsHolder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4995286A23FDBA6900AE64D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = SupportingFiles/AppDelegate.swift; sourceTree = "<group>"; };
 		4995287323FDBA6C00AE64D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4995287623FDBA6C00AE64D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4995287823FDBA6C00AE64D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,11 +41,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490EB31623FEC25B00055B0C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				490EB31723FEC26800055B0C /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4917F53F23FDC412001DDC5C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				490EB31923FEC33400055B0C /* LaunchScreen.storyboard */,
 				4995287323FDBA6C00AE64D7 /* Assets.xcassets */,
-				4995287523FDBA6C00AE64D7 /* LaunchScreen.storyboard */,
 				4995287823FDBA6C00AE64D7 /* Info.plist */,
 			);
 			path = SupportingFiles;
@@ -50,6 +64,7 @@
 			children = (
 				4917F54223FDC482001DDC5C /* CardsHolderViewController.swift */,
 				4917F54423FDC490001DDC5C /* CardsHolderView.swift */,
+				490EB32023FECFCD00055B0C /* CardView.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -57,6 +72,7 @@
 		4917F54123FDC46A001DDC5C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				490EB31C23FECDE400055B0C /* ProfileViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -80,6 +96,7 @@
 		4995286923FDBA6900AE64D7 /* CardsHolder */ = {
 			isa = PBXGroup;
 			children = (
+				490EB31623FEC25B00055B0C /* Extensions */,
 				4917F54023FDC458001DDC5C /* Source */,
 				4917F54123FDC46A001DDC5C /* Scenes */,
 				4995286A23FDBA6900AE64D7 /* AppDelegate.swift */,
@@ -146,8 +163,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4995287723FDBA6C00AE64D7 /* LaunchScreen.storyboard in Resources */,
 				4995287423FDBA6C00AE64D7 /* Assets.xcassets in Resources */,
+				490EB31B23FEC33400055B0C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,19 +175,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490EB32123FECFCD00055B0C /* CardView.swift in Sources */,
 				4917F54323FDC482001DDC5C /* CardsHolderViewController.swift in Sources */,
 				4995286B23FDBA6900AE64D7 /* AppDelegate.swift in Sources */,
+				490EB31D23FECDE400055B0C /* ProfileViewController.swift in Sources */,
 				4917F54523FDC490001DDC5C /* CardsHolderView.swift in Sources */,
+				490EB31823FEC26800055B0C /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4995287523FDBA6C00AE64D7 /* LaunchScreen.storyboard */ = {
+		490EB31923FEC33400055B0C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4995287623FDBA6C00AE64D7 /* Base */,
+				490EB31A23FEC33400055B0C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -297,7 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CardsHolder/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CardsHolder/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +334,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CardsHolder/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CardsHolder/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

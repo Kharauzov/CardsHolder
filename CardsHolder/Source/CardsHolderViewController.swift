@@ -10,21 +10,17 @@ import UIKit
 
 class CardsHolderViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // MARK: Properties
+    
+    lazy var customView = view as! CardsHolderView
+    
+    // MARK: Lifecycle
 
-        // Do any additional setup after loading the view.
+    override func loadView() {
+        view = CardsHolderView(frame: UIScreen.main.bounds)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-    */
-
 }
