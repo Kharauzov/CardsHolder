@@ -14,8 +14,12 @@ extension CardsHolderView {
         static let cardTopCornerRadius: CGFloat = 34
         /// We need to use overlay effect for all subviews in the hierarchy
         /// due to round corners. http://snpy.in/XVxLbD
-        static let subviewBottomOffset: CGFloat = 30
+        static let subviewBottomOffset: CGFloat = 40
         static let navigationBarHeight: CGFloat = 88
+        static let shortAnimationDuration: TimeInterval = 0.33
+        static let mediumAnimationDuration: TimeInterval = 0.5
+        static let topPositionCardsInterval: CGFloat = 10
+        static let draggingThreshold: CGFloat = 50
     }
 }
 
@@ -23,19 +27,20 @@ class CardsHolderView: UIView {
 
     // MARK: Properties
     
-    private let topContainerView: UIView = {
+    let topView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(hexString: "#5F2DA0")
         return view
     }()
-    private let cardContainerView1: CardView = {
+    let cardView1: CardView = {
         let view = CardView()
-        view.backgroundColor = UIColor(hexString: "#FCAA43")
         return view
     }()
-    private let cardContainerView2: CardView = {
+    let cardView2: CardView = {
         let view = CardView()
-        view.backgroundColor = UIColor(hexString: "#000000")
+        return view
+    }()
+    private let bottomHoverView: UIView = {
+        let view = UIView()
         return view
     }()
     
@@ -57,19 +62,19 @@ class CardsHolderView: UIView {
     }
     
     private func addSubviews() {
-        addSubview(topContainerView)
-        addSubview(cardContainerView1)
-        addSubview(cardContainerView2)
+        addSubview(topView)
+        addSubview(cardView1)
+        addSubview(cardView2)
         let screenBounds = UIScreen.main.bounds
         // setting card #2
-        cardContainerView2.frame = CGRect(x: 0, y: screenBounds.maxY - Constants.closedCardViewHeight, width: screenBounds.width, height: Constants.closedCardViewHeight)
+        cardView2.frame = CGRect(x: 0, y: screenBounds.maxY - Constants.closedCardViewHeight, width: screenBounds.width, height: screenBounds.height - Constants.navigationBarHeight + Constants.subviewBottomOffset)
+        bottomHoverView.frame = CGRect(x: 0, y: Constants.closedCardViewHeight, width: screenBounds.width, height: Constants.closedCardViewHeight)
         // setting card #1
-        cardContainerView1.frame = cardContainerView2.frame
-        cardContainerView1.frame.origin.y = cardContainerView2.frame.minY - (Constants.closedCardViewHeight - Constants.subviewBottomOffset)
+        cardView1.frame = CGRect(x: 0, y: cardView2.frame.minY - (Constants.closedCardViewHeight - Constants.subviewBottomOffset), width: screenBounds.width, height: screenBounds.height - Constants.navigationBarHeight - Constants.closedCardViewHeight + Constants.subviewBottomOffset)
         // setting top container
-        topContainerView.frame = CGRect(x: 0, y: 0, width: screenBounds.width, height: cardContainerView1.frame.minY + Constants.subviewBottomOffset)
+        topView.frame = CGRect(x: 0, y: 0, width: screenBounds.width, height: cardView1.frame.minY + Constants.subviewBottomOffset)
         // perform roundings
-        cardContainerView1.roundCorners(top: true, cornerRadii: Constants.cardTopCornerRadius)
-        cardContainerView2.roundCorners(top: true, cornerRadii: Constants.cardTopCornerRadius)
+        cardView1.roundCorners(top: true, cornerRadii: Constants.cardTopCornerRadius)
+        cardView2.roundCorners(top: true, cornerRadii: Constants.cardTopCornerRadius)
     }
 }
