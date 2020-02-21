@@ -20,6 +20,7 @@ extension CardsHolderView {
         static let mediumAnimationDuration: TimeInterval = 0.5
         static let topPositionCardsInterval: CGFloat = 10
         static let draggingThreshold: CGFloat = 50
+        static let cardsSpringWithDamping: CGFloat = 0.75
     }
 }
 

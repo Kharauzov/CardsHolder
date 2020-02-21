@@ -12,5 +12,8 @@ class ProfileViewController: CardsHolderViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        didOccurDraggingEvent = { value in
+            debugPrint("\(Date().description) Dragging value \(value)")
+        }
     }
 }
