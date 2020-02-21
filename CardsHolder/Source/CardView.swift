@@ -9,6 +9,12 @@
 import UIKit
 
 class CardView: UIView {
+    enum State: Int {
+        case open
+        case closed
+    }
+    
+    var state: State = .closed
 }
 
 extension CardView {

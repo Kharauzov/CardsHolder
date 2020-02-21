@@ -21,6 +21,9 @@ class CardsDragger: NSObject {
     private var beginDraggingFrame: CGRect = .zero
     private var beginDraggingSecondaryFrame: CGRect = .zero
     private var displayLink: CADisplayLink?
+    private var areBothCardsOpened: Bool {
+        return cardView1.state == .open && cardView2.state == .open
+    }
     
     // MARK: Public properties
     
@@ -68,6 +71,7 @@ class CardsDragger: NSObject {
     }
     
     @objc private func panGestureRecognizer1Occur(_ sender: UIPanGestureRecognizer) {
+        if areBothCardsOpened { return }
         guard let cardContainerView = sender.view, cardContainerView == cardView1 else { return }
         let translation = sender.translation(in: view)
         let newY = cardView1.frame.origin.y + translation.y
@@ -107,8 +111,12 @@ class CardsDragger: NSObject {
         case .changed:
             if newY >= CardsHolderView.Constants.navigationBarHeight + CardsHolderView.Constants.topPositionCardsInterval && newY <= initialCard2Frame.origin.y {
                 cardView2.frame.origin.y = newY
-                if newY <= cardView1.frame.origin.y + CardsHolderView.Constants.topPositionCardsInterval && cardView1.frame.origin.y != CardsHolderView.Constants.navigationBarHeight {
-                    cardView1.frame.origin.y = newY - CardsHolderView.Constants.topPositionCardsInterval
+                let isMinIntervalReached = newY <= cardView1.frame.origin.y + CardsHolderView.Constants.topPositionCardsInterval
+                let isCardView1YLowerItsMinValue = cardView1.frame.origin.y <= initialCard1Frame.origin.y
+                if ((isMinIntervalReached || isCardView1YLowerItsMinValue) && cardView1.state != .open)
+                    || areBothCardsOpened {
+                    let cardView1NewY = CGFloat.minimum(newY - CardsHolderView.Constants.topPositionCardsInterval, initialCard1Frame.origin.y)
+                    cardView1.frame.origin.y = cardView1NewY
                 }
             }
             sender.setTranslation(CGPoint.zero, in: view)
@@ -164,6 +172,7 @@ class CardsDragger: NSObject {
     
     func openTopCard(animated: Bool) {
         addDisplayLink()
+        cardView1.state = .open
         UIView.animate(withDuration: CardsHolderView.Constants.mediumAnimationDuration, delay: 0, usingSpringWithDamping: CardsHolderView.Constants.cardsSpringWithDamping, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self.cardView1.frame.origin.y = CardsHolderView.Constants.navigationBarHeight
         }) { (_) in
@@ -173,6 +182,7 @@ class CardsDragger: NSObject {
     
     func closeTopCard(animated: Bool) {
         addDisplayLink()
+        cardView1.state = .closed
         UIView.animate(withDuration: CardsHolderView.Constants.mediumAnimationDuration, delay: 0, usingSpringWithDamping: CardsHolderView.Constants.cardsSpringWithDamping, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self.cardView1.frame = self.initialCard1Frame
         }) { (_) in
@@ -182,6 +192,7 @@ class CardsDragger: NSObject {
     
     func openBottomCard(animated: Bool) {
         addDisplayLink()
+        cardView2.state = .open
         UIView.animate(withDuration: CardsHolderView.Constants.mediumAnimationDuration, delay: 0, usingSpringWithDamping: CardsHolderView.Constants.cardsSpringWithDamping, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self.cardView2.frame.origin.y = CardsHolderView.Constants.navigationBarHeight + CardsHolderView.Constants.topPositionCardsInterval
         }) { (_) in
@@ -191,6 +202,7 @@ class CardsDragger: NSObject {
     
     func closeBottomCard(animated: Bool) {
         addDisplayLink()
+        cardView2.state = .closed
         UIView.animate(withDuration: CardsHolderView.Constants.mediumAnimationDuration, delay: 0, usingSpringWithDamping: CardsHolderView.Constants.cardsSpringWithDamping, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self.cardView2.frame = self.initialCard2Frame
         }) { (_) in
