@@ -11,8 +11,8 @@ import UIKit
 struct ActivityViewModel {
     let title: String
     let authorName: String
-    let authorImage: UIImage
+    let authorImage: UIImage?
     let progress: CGFloat
     let progressString: String
-    let coverImage: UIImage
+    let coverImage: UIImage?
 }
