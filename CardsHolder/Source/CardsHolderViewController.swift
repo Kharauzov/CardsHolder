@@ -31,15 +31,7 @@ class CardsHolderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackgroundColors()
         _ = cardsDragger
-    }
-    
-    // FIXME: remove this after testing
-    private func setupBackgroundColors() {
-        customView.topView.backgroundColor = UIColor(hexString: "#5F2DA0")
-        customView.cardView1.backgroundColor = UIColor(hexString: "#FCAA43")
-        customView.cardView2.backgroundColor = UIColor(hexString: "#000000")
     }
     
     private func add(_ child: UIViewController, shouldAddView: Bool = false) {
@@ -64,6 +56,7 @@ class CardsHolderViewController: UIViewController {
     private func setCardChildViewController(_ viewController: UIViewController, hostView: CardView) {
         add(viewController)
         hostView.addSubview(viewController.view)
+        hostView.backgroundColor = viewController.view.backgroundColor
         viewController.view.frame = CGRect(origin: hostView.bounds.origin, size: CGSize(width: hostView.bounds.size.width, height: hostView.bounds.size.height - CardsHolderView.Constants.subviewBottomOffset))
     }
     

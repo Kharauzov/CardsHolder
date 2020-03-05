@@ -33,6 +33,11 @@
 		493AD28A24113A3C0042BBB1 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 493AD27724113A3C0042BBB1 /* Montserrat-SemiBoldItalic.ttf */; };
 		493AD28B24113A3C0042BBB1 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 493AD27824113A3C0042BBB1 /* Montserrat-ExtraBoldItalic.ttf */; };
 		493AD28D24113B400042BBB1 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD28C24113B400042BBB1 /* UIFont+Extension.swift */; };
+		493AD28F24113CFB0042BBB1 /* ProfileShortInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD28E24113CFB0042BBB1 /* ProfileShortInfoViewController.swift */; };
+		493AD29324113D280042BBB1 /* ProfileActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD29224113D280042BBB1 /* ProfileActivityViewController.swift */; };
+		493AD29624113E380042BBB1 /* RecommendationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD29524113E380042BBB1 /* RecommendationsViewController.swift */; };
+		493AD29824113E4A0042BBB1 /* ProfileShortInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD29724113E4A0042BBB1 /* ProfileShortInfoView.swift */; };
+		493AD29B241142170042BBB1 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD29A241142170042BBB1 /* GridLayout.swift */; };
 		4995286B23FDBA6900AE64D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995286A23FDBA6900AE64D7 /* AppDelegate.swift */; };
 		4995287423FDBA6C00AE64D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4995287323FDBA6C00AE64D7 /* Assets.xcassets */; };
 		49AB3C2723FFDE6400831E73 /* CardsDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB3C2623FFDE6400831E73 /* CardsDragger.swift */; };
@@ -65,6 +70,11 @@
 		493AD27724113A3C0042BBB1 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		493AD27824113A3C0042BBB1 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		493AD28C24113B400042BBB1 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		493AD28E24113CFB0042BBB1 /* ProfileShortInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileShortInfoViewController.swift; sourceTree = "<group>"; };
+		493AD29224113D280042BBB1 /* ProfileActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActivityViewController.swift; sourceTree = "<group>"; };
+		493AD29524113E380042BBB1 /* RecommendationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsViewController.swift; sourceTree = "<group>"; };
+		493AD29724113E4A0042BBB1 /* ProfileShortInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileShortInfoView.swift; sourceTree = "<group>"; };
+		493AD29A241142170042BBB1 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		4995286723FDBA6900AE64D7 /* CardsHolder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardsHolder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4995286A23FDBA6900AE64D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = SupportingFiles/AppDelegate.swift; sourceTree = "<group>"; };
 		4995287323FDBA6C00AE64D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +102,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4917129324114F970030EE08 /* ProfileFlow */ = {
+			isa = PBXGroup;
+			children = (
+				490EB31C23FECDE400055B0C /* ProfileViewController.swift */,
+				493AD29424113D2B0042BBB1 /* Recommendations */,
+				493AD29124113D0F0042BBB1 /* ProfileActivity */,
+				493AD29024113D000042BBB1 /* ProfileShortInfo */,
+			);
+			path = ProfileFlow;
+			sourceTree = "<group>";
+		};
 		4917F53F23FDC412001DDC5C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +138,7 @@
 		4917F54123FDC46A001DDC5C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				490EB31C23FECDE400055B0C /* ProfileViewController.swift */,
+				4917129324114F970030EE08 /* ProfileFlow */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -156,6 +177,39 @@
 			path = Montserrat;
 			sourceTree = "<group>";
 		};
+		493AD29024113D000042BBB1 /* ProfileShortInfo */ = {
+			isa = PBXGroup;
+			children = (
+				493AD28E24113CFB0042BBB1 /* ProfileShortInfoViewController.swift */,
+				493AD29724113E4A0042BBB1 /* ProfileShortInfoView.swift */,
+			);
+			path = ProfileShortInfo;
+			sourceTree = "<group>";
+		};
+		493AD29124113D0F0042BBB1 /* ProfileActivity */ = {
+			isa = PBXGroup;
+			children = (
+				493AD29224113D280042BBB1 /* ProfileActivityViewController.swift */,
+			);
+			path = ProfileActivity;
+			sourceTree = "<group>";
+		};
+		493AD29424113D2B0042BBB1 /* Recommendations */ = {
+			isa = PBXGroup;
+			children = (
+				493AD29524113E380042BBB1 /* RecommendationsViewController.swift */,
+			);
+			path = Recommendations;
+			sourceTree = "<group>";
+		};
+		493AD299241142050042BBB1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				493AD29A241142170042BBB1 /* GridLayout.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		4995285E23FDBA6900AE64D7 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +229,7 @@
 		4995286923FDBA6900AE64D7 /* CardsHolder */ = {
 			isa = PBXGroup;
 			children = (
+				493AD299241142050042BBB1 /* Utils */,
 				490EB31623FEC25B00055B0C /* Extensions */,
 				4917F54023FDC458001DDC5C /* Source */,
 				4917F54123FDC46A001DDC5C /* Scenes */,
@@ -274,7 +329,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				490EB32123FECFCD00055B0C /* CardView.swift in Sources */,
+				493AD29624113E380042BBB1 /* RecommendationsViewController.swift in Sources */,
+				493AD28F24113CFB0042BBB1 /* ProfileShortInfoViewController.swift in Sources */,
 				4917F54323FDC482001DDC5C /* CardsHolderViewController.swift in Sources */,
+				493AD29324113D280042BBB1 /* ProfileActivityViewController.swift in Sources */,
+				493AD29824113E4A0042BBB1 /* ProfileShortInfoView.swift in Sources */,
+				493AD29B241142170042BBB1 /* GridLayout.swift in Sources */,
 				4995286B23FDBA6900AE64D7 /* AppDelegate.swift in Sources */,
 				49AB3C2723FFDE6400831E73 /* CardsDragger.swift in Sources */,
 				490EB31D23FECDE400055B0C /* ProfileViewController.swift in Sources */,

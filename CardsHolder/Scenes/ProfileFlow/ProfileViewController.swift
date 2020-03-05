@@ -16,13 +16,12 @@ class ProfileViewController: CardsHolderViewController {
             debugPrint("\(Date().description) Dragging value \(value)")
         }
         
-        let topViewController = UIViewController()
-        topViewController.view.backgroundColor = .yellow
+        let topViewController = ProfileShortInfoViewController()
+        view.backgroundColor = topViewController.view.backgroundColor
         
-        let card1ViewController = UIViewController()
+        let card1ViewController = ProfileActivityViewController()
         
-        let card2ViewController = UIViewController()
-        card2ViewController.view.backgroundColor = .green
+        let card2ViewController = RecommendationsViewController()
         
         setTopChildViewController(topViewController)
         setCard1ChildViewController(card1ViewController)
