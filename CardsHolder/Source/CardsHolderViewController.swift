@@ -34,6 +34,8 @@ class CardsHolderViewController: UIViewController {
         _ = cardsDragger
     }
     
+    // MARK: Private methods
+    
     private func add(_ child: UIViewController, shouldAddView: Bool = false) {
         addChild(child)
         if shouldAddView {
