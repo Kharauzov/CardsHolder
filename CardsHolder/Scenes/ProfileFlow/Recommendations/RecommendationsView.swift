@@ -1,14 +1,14 @@
 //
-//  ProfileActivityView.swift
+//  RecommendationsView.swift
 //  CardsHolder
 //
-//  Created by Serhii Kharauzov on 05.03.2020.
+//  Created by Serhii Kharauzov on 11.03.2020.
 //  Copyright © 2020 Serhii Kharauzov. All rights reserved.
 //
 
 import UIKit
 
-class ProfileActivityView: UIView {
+class RecommendationsView: UIView {
 
     let dragIndicatorView: DragIndicatorView = {
         let view = DragIndicatorView()
@@ -19,14 +19,6 @@ class ProfileActivityView: UIView {
         let label = CardTitleLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    }()
-    let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.separatorStyle = .none
-        tableView.showsVerticalScrollIndicator = false
-        tableView.backgroundColor = .clear
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
     }()
     
     override init(frame: CGRect) {
@@ -39,7 +31,7 @@ class ProfileActivityView: UIView {
     }
     
     private func initialise() {
-        backgroundColor = UIColor(hexString: "#FFCE32")
+        backgroundColor = .white
         addSubviews()
     }
 
@@ -52,10 +44,6 @@ class ProfileActivityView: UIView {
         addSubview(titleLabel)
         NSLayoutConstraint(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 30).isActive = true
         NSLayoutConstraint(item: titleLabel, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: GridLayout.regularSpace * 3).isActive = true
-        addSubview(tableView)
-        NSLayoutConstraint(item: tableView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1.0, constant: GridLayout.regularSpace * 3).isActive = true
-        NSLayoutConstraint(item: tableView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: tableView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: tableView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
     }
+
 }

@@ -10,8 +10,14 @@ import UIKit
 
 class RecommendationsViewController: UIViewController {
 
+    lazy var customView = view as! RecommendationsView
+    
+    override func loadView() {
+        view = RecommendationsView(frame: UIScreen.main.bounds)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        customView.titleLabel.text = "Recommended"
     }
 }

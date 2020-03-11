@@ -39,6 +39,9 @@
 		493AD29824113E4A0042BBB1 /* ProfileShortInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD29724113E4A0042BBB1 /* ProfileShortInfoView.swift */; };
 		493AD29B241142170042BBB1 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD29A241142170042BBB1 /* GridLayout.swift */; };
 		496965C424127580001D2D53 /* ProfileShortInfoAnimationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496965C324127580001D2D53 /* ProfileShortInfoAnimationHandler.swift */; };
+		498F9D6C241953EA00C47A0D /* RecommendationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F9D6B241953EA00C47A0D /* RecommendationsView.swift */; };
+		498F9D6F2419554F00C47A0D /* DragIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F9D6E2419554F00C47A0D /* DragIndicatorView.swift */; };
+		498F9D73241955AD00C47A0D /* CardTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F9D72241955AD00C47A0D /* CardTitleLabel.swift */; };
 		4995286B23FDBA6900AE64D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995286A23FDBA6900AE64D7 /* AppDelegate.swift */; };
 		4995287423FDBA6C00AE64D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4995287323FDBA6C00AE64D7 /* Assets.xcassets */; };
 		49AB3C2723FFDE6400831E73 /* CardsDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB3C2623FFDE6400831E73 /* CardsDragger.swift */; };
@@ -82,6 +85,9 @@
 		493AD29724113E4A0042BBB1 /* ProfileShortInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileShortInfoView.swift; sourceTree = "<group>"; };
 		493AD29A241142170042BBB1 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		496965C324127580001D2D53 /* ProfileShortInfoAnimationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileShortInfoAnimationHandler.swift; sourceTree = "<group>"; };
+		498F9D6B241953EA00C47A0D /* RecommendationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsView.swift; sourceTree = "<group>"; };
+		498F9D6E2419554F00C47A0D /* DragIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragIndicatorView.swift; sourceTree = "<group>"; };
+		498F9D72241955AD00C47A0D /* CardTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTitleLabel.swift; sourceTree = "<group>"; };
 		4995286723FDBA6900AE64D7 /* CardsHolder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardsHolder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4995286A23FDBA6900AE64D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = SupportingFiles/AppDelegate.swift; sourceTree = "<group>"; };
 		4995287323FDBA6C00AE64D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 		4917129324114F970030EE08 /* ProfileFlow */ = {
 			isa = PBXGroup;
 			children = (
+				498F9D6D2419553A00C47A0D /* Views */,
 				490EB31C23FECDE400055B0C /* ProfileViewController.swift */,
 				493AD29424113D2B0042BBB1 /* Recommendations */,
 				493AD29124113D0F0042BBB1 /* ProfileActivity */,
@@ -214,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				493AD29524113E380042BBB1 /* RecommendationsViewController.swift */,
+				498F9D6B241953EA00C47A0D /* RecommendationsView.swift */,
 			);
 			path = Recommendations;
 			sourceTree = "<group>";
@@ -224,6 +232,15 @@
 				493AD29A241142170042BBB1 /* GridLayout.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		498F9D6D2419553A00C47A0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				498F9D6E2419554F00C47A0D /* DragIndicatorView.swift */,
+				498F9D72241955AD00C47A0D /* CardTitleLabel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4995285E23FDBA6900AE64D7 = {
@@ -363,16 +380,19 @@
 				49E84A1A24118448005E1A1B /* ProgressView.swift in Sources */,
 				493AD29324113D280042BBB1 /* ProfileActivityViewController.swift in Sources */,
 				493AD29824113E4A0042BBB1 /* ProfileShortInfoView.swift in Sources */,
+				498F9D73241955AD00C47A0D /* CardTitleLabel.swift in Sources */,
 				493AD29B241142170042BBB1 /* GridLayout.swift in Sources */,
 				496965C424127580001D2D53 /* ProfileShortInfoAnimationHandler.swift in Sources */,
 				4995286B23FDBA6900AE64D7 /* AppDelegate.swift in Sources */,
 				49AB3C2723FFDE6400831E73 /* CardsDragger.swift in Sources */,
 				49E84A1824117A0A005E1A1B /* ActivityViewModel.swift in Sources */,
+				498F9D6F2419554F00C47A0D /* DragIndicatorView.swift in Sources */,
 				490EB31D23FECDE400055B0C /* ProfileViewController.swift in Sources */,
 				4917F54523FDC490001DDC5C /* CardsHolderView.swift in Sources */,
 				493AD28D24113B400042BBB1 /* UIFont+Extension.swift in Sources */,
 				490EB31823FEC26800055B0C /* UIColor+Extension.swift in Sources */,
 				49E84A1C2411879B005E1A1B /* MockActivityDataFactory.swift in Sources */,
+				498F9D6C241953EA00C47A0D /* RecommendationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
