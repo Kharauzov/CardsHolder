@@ -67,8 +67,8 @@ class CardsHolderViewController: UIViewController {
     final func setTopChildViewController(_ viewController: UIViewController) {
         add(viewController)
         customView.topView.addSubview(viewController.view)
-        let origin = CGPoint(x: 0, y: CardsHolderView.Constants.navigationBarHeight)
-        let size = CGSize(width: customView.topView.frame.size.width, height: customView.topView.frame.size.height - CardsHolderView.Constants.subviewBottomOffset - CardsHolderView.Constants.navigationBarHeight)
+        let origin = CGPoint(x: 0, y: CardsHolderView.Constants.minCardTopMargin)
+        let size = CGSize(width: customView.topView.frame.size.width, height: customView.topView.frame.size.height - CardsHolderView.Constants.subviewBottomOffset - CardsHolderView.Constants.minCardTopMargin)
         viewController.view.frame = CGRect(origin: origin, size: size)
     }
 

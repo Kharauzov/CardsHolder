@@ -44,12 +44,12 @@ class ProfileViewController: CardsHolderViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if animationHandler == nil {
-            guard let avatarImageView = topViewController?.avatarImageView,
+            guard let profileShortInfoView = topViewController?.customView,
                 let cardView1 = activityViewController?.view.superview
                 else {
                 return
             }
-            animationHandler = ProfileShortInfoAnimationHandler(globalView: view, avatarImageView: avatarImageView, cardView: cardView1)
+            animationHandler = ProfileShortInfoAnimationHandler(globalView: view, cardView: cardView1, profileShortInfoView: profileShortInfoView)
         }
     }
 }

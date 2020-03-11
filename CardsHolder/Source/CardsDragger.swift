@@ -64,8 +64,8 @@ class CardsDragger: NSObject {
     }
     
     private func cardDraggingOccured(cardView1Frame: CGRect, cardView2Frame: CGRect) {
-        let fullDistance = initialCard1Frame.origin.y - CardsHolderView.Constants.navigationBarHeight
-        let currentDistance = cardView1Frame.origin.y - CardsHolderView.Constants.navigationBarHeight
+        let fullDistance = initialCard1Frame.origin.y - CardsHolderView.Constants.minCardTopMargin
+        let currentDistance = cardView1Frame.origin.y - CardsHolderView.Constants.minCardTopMargin
         let value = (fullDistance - currentDistance) / fullDistance
         didOccurDraggingEvent?(value)
     }
@@ -79,7 +79,7 @@ class CardsDragger: NSObject {
         case .began:
             beginDraggingFrame = cardView1.frame
         case .changed:
-            if newY >= CardsHolderView.Constants.navigationBarHeight && newY <= initialCard1Frame.origin.y {
+            if newY >= CardsHolderView.Constants.minCardTopMargin && newY <= initialCard1Frame.origin.y {
                 cardView1.frame.origin.y = newY
             }
             sender.setTranslation(CGPoint.zero, in: view)
@@ -109,7 +109,7 @@ class CardsDragger: NSObject {
             beginDraggingFrame = cardView2.frame
             beginDraggingSecondaryFrame = cardView1.frame
         case .changed:
-            if newY >= CardsHolderView.Constants.navigationBarHeight + CardsHolderView.Constants.topPositionCardsInterval && newY <= initialCard2Frame.origin.y {
+            if newY >= CardsHolderView.Constants.minCardTopMargin + CardsHolderView.Constants.topPositionCardsInterval && newY <= initialCard2Frame.origin.y {
                 cardView2.frame.origin.y = newY
                 let isMinIntervalReached = newY <= cardView1.frame.origin.y + CardsHolderView.Constants.topPositionCardsInterval
                 let isCardView1YLowerItsMinValue = cardView1.frame.origin.y <= initialCard1Frame.origin.y
@@ -178,7 +178,7 @@ class CardsDragger: NSObject {
         addDisplayLink()
         cardView1.state = .open
         UIView.animate(withDuration: CardsHolderView.Constants.mediumAnimationDuration, delay: 0, usingSpringWithDamping: CardsHolderView.Constants.cardsSpringWithDamping, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            self.cardView1.frame.origin.y = CardsHolderView.Constants.navigationBarHeight
+            self.cardView1.frame.origin.y = CardsHolderView.Constants.minCardTopMargin
         }) { (_) in
             self.invalidateDisplayLink()
         }
@@ -198,7 +198,7 @@ class CardsDragger: NSObject {
         addDisplayLink()
         cardView2.state = .open
         UIView.animate(withDuration: CardsHolderView.Constants.mediumAnimationDuration, delay: 0, usingSpringWithDamping: CardsHolderView.Constants.cardsSpringWithDamping, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            self.cardView2.frame.origin.y = CardsHolderView.Constants.navigationBarHeight + CardsHolderView.Constants.topPositionCardsInterval
+            self.cardView2.frame.origin.y = CardsHolderView.Constants.minCardTopMargin + CardsHolderView.Constants.topPositionCardsInterval
         }) { (_) in
             self.invalidateDisplayLink()
         }
