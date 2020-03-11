@@ -38,6 +38,7 @@
 		493AD29624113E380042BBB1 /* RecommendationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD29524113E380042BBB1 /* RecommendationsViewController.swift */; };
 		493AD29824113E4A0042BBB1 /* ProfileShortInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD29724113E4A0042BBB1 /* ProfileShortInfoView.swift */; };
 		493AD29B241142170042BBB1 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD29A241142170042BBB1 /* GridLayout.swift */; };
+		496965C424127580001D2D53 /* ProfileShortInfoAnimationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496965C324127580001D2D53 /* ProfileShortInfoAnimationHandler.swift */; };
 		4995286B23FDBA6900AE64D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995286A23FDBA6900AE64D7 /* AppDelegate.swift */; };
 		4995287423FDBA6C00AE64D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4995287323FDBA6C00AE64D7 /* Assets.xcassets */; };
 		49AB3C2723FFDE6400831E73 /* CardsDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB3C2623FFDE6400831E73 /* CardsDragger.swift */; };
@@ -80,6 +81,7 @@
 		493AD29524113E380042BBB1 /* RecommendationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsViewController.swift; sourceTree = "<group>"; };
 		493AD29724113E4A0042BBB1 /* ProfileShortInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileShortInfoView.swift; sourceTree = "<group>"; };
 		493AD29A241142170042BBB1 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		496965C324127580001D2D53 /* ProfileShortInfoAnimationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileShortInfoAnimationHandler.swift; sourceTree = "<group>"; };
 		4995286723FDBA6900AE64D7 /* CardsHolder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardsHolder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4995286A23FDBA6900AE64D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = SupportingFiles/AppDelegate.swift; sourceTree = "<group>"; };
 		4995287323FDBA6C00AE64D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				493AD28E24113CFB0042BBB1 /* ProfileShortInfoViewController.swift */,
 				493AD29724113E4A0042BBB1 /* ProfileShortInfoView.swift */,
+				496965C324127580001D2D53 /* ProfileShortInfoAnimationHandler.swift */,
 			);
 			path = ProfileShortInfo;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				493AD29324113D280042BBB1 /* ProfileActivityViewController.swift in Sources */,
 				493AD29824113E4A0042BBB1 /* ProfileShortInfoView.swift in Sources */,
 				493AD29B241142170042BBB1 /* GridLayout.swift in Sources */,
+				496965C424127580001D2D53 /* ProfileShortInfoAnimationHandler.swift in Sources */,
 				4995286B23FDBA6900AE64D7 /* AppDelegate.swift in Sources */,
 				49AB3C2723FFDE6400831E73 /* CardsDragger.swift in Sources */,
 				49E84A1824117A0A005E1A1B /* ActivityViewModel.swift in Sources */,
@@ -504,8 +508,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B375T6ZNZC;
 				INFOPLIST_FILE = "$(SRCROOT)/CardsHolder/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -524,8 +529,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B375T6ZNZC;
 				INFOPLIST_FILE = "$(SRCROOT)/CardsHolder/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -11,6 +11,9 @@ import UIKit
 class ProfileShortInfoViewController: UIViewController {
 
     lazy var customView = view as! ProfileShortInfoView
+    var avatarImageView: UIImageView {
+        return customView.avatarImageView
+    }
     
     override func loadView() {
         view = ProfileShortInfoView(frame: UIScreen.main.bounds)

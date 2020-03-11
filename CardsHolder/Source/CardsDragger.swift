@@ -142,8 +142,11 @@ class CardsDragger: NSObject {
     }
     
     private func move(view: UIView, toFrame: CGRect, animated: Bool) {
+        addDisplayLink()
         UIView.animate(withDuration: CardsHolderView.Constants.shortAnimationDuration, delay: 0, options: .curveEaseOut, animations: {
             view.frame = toFrame
+        }, completion: { (_) in
+            self.invalidateDisplayLink()
         })
     }
     
@@ -151,7 +154,8 @@ class CardsDragger: NSObject {
         if displayLink != nil { return }
         let displayLink = CADisplayLink(target: self, selector: #selector(animationDidUpdate))
         displayLink.preferredFramesPerSecond = 60
-        displayLink.add(to: .main, forMode: .default)
+        
+        displayLink.add(to: .current, forMode: .common)
         self.displayLink = displayLink
     }
     

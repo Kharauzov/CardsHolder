@@ -17,10 +17,11 @@ extension CardsHolderView {
         static let subviewBottomOffset: CGFloat = 40
         static let navigationBarHeight: CGFloat = 88
         static let shortAnimationDuration: TimeInterval = 0.33
-        static let mediumAnimationDuration: TimeInterval = 0.5
+        static let mediumAnimationDuration: TimeInterval = 1
+        
         static let topPositionCardsInterval: CGFloat = 10
         static let draggingThreshold: CGFloat = 50
-        static let cardsSpringWithDamping: CGFloat = 0.75
+        static let cardsSpringWithDamping: CGFloat = 1
     }
 }
 
