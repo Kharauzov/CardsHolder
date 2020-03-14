@@ -26,6 +26,19 @@ class ProfileViewController: CardsHolderViewController {
             self?.animationHandler?.handleFramesUpdate()
         }
         setChildViewControllers()
+        activityViewController?.didSelectItem = { [unowned self] item in
+            self.showDetailsView(viewModel: item)
+        }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    private func showDetailsView(viewModel: ActivityViewModel) {
+        let viewController = DetailsViewController(viewModel: viewModel)
+        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: true, completion: nil)
     }
     
     private func setChildViewControllers() {

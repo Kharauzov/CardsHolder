@@ -1,9 +1,9 @@
 //
 //  UIFont+Extension.swift
-//  Otrium
+//  CardsHolder
 //
-//  Created by Serhii Kharauzov on 4/4/19.
-//  Copyright © 2019 Otrium. All rights reserved.
+//  Created by Serhii Kharauzov on 14.03.2020.
+//  Copyright © 2020 Serhii Kharauzov. All rights reserved.
 //
 
 import Foundation

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490CAD66241CE83400BCB424 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CAD65241CE83400BCB424 /* String+Extension.swift */; };
+		490CAD68241CEA5F00BCB424 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CAD67241CEA5F00BCB424 /* GradientView.swift */; };
+		490CAD6A241CED3500BCB424 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CAD69241CED3500BCB424 /* UIImage+Extension.swift */; };
+		490CAD6C241CF25B00BCB424 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CAD6B241CF25B00BCB424 /* UIView+Extension.swift */; };
 		490EB31823FEC26800055B0C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EB31723FEC26800055B0C /* UIColor+Extension.swift */; };
 		490EB31B23FEC33400055B0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490EB31923FEC33400055B0C /* LaunchScreen.storyboard */; };
 		490EB31D23FECDE400055B0C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EB31C23FECDE400055B0C /* ProfileViewController.swift */; };
@@ -42,6 +46,8 @@
 		498F9D6C241953EA00C47A0D /* RecommendationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F9D6B241953EA00C47A0D /* RecommendationsView.swift */; };
 		498F9D6F2419554F00C47A0D /* DragIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F9D6E2419554F00C47A0D /* DragIndicatorView.swift */; };
 		498F9D73241955AD00C47A0D /* CardTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F9D72241955AD00C47A0D /* CardTitleLabel.swift */; };
+		498F9D76241957E200C47A0D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F9D75241957E200C47A0D /* DetailsViewController.swift */; };
+		498F9D78241957EC00C47A0D /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F9D77241957EC00C47A0D /* DetailsView.swift */; };
 		4995286B23FDBA6900AE64D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995286A23FDBA6900AE64D7 /* AppDelegate.swift */; };
 		4995287423FDBA6C00AE64D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4995287323FDBA6C00AE64D7 /* Assets.xcassets */; };
 		49AB3C2723FFDE6400831E73 /* CardsDragger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB3C2623FFDE6400831E73 /* CardsDragger.swift */; };
@@ -53,6 +59,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		490CAD65241CE83400BCB424 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		490CAD67241CEA5F00BCB424 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		490CAD69241CED3500BCB424 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		490CAD6B241CF25B00BCB424 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		490EB31723FEC26800055B0C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		490EB31A23FEC33400055B0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CardsHolder/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		490EB31C23FECDE400055B0C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +98,8 @@
 		498F9D6B241953EA00C47A0D /* RecommendationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsView.swift; sourceTree = "<group>"; };
 		498F9D6E2419554F00C47A0D /* DragIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragIndicatorView.swift; sourceTree = "<group>"; };
 		498F9D72241955AD00C47A0D /* CardTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTitleLabel.swift; sourceTree = "<group>"; };
+		498F9D75241957E200C47A0D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		498F9D77241957EC00C47A0D /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		4995286723FDBA6900AE64D7 /* CardsHolder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardsHolder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4995286A23FDBA6900AE64D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = SupportingFiles/AppDelegate.swift; sourceTree = "<group>"; };
 		4995287323FDBA6C00AE64D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +128,9 @@
 			children = (
 				490EB31723FEC26800055B0C /* UIColor+Extension.swift */,
 				493AD28C24113B400042BBB1 /* UIFont+Extension.swift */,
+				490CAD65241CE83400BCB424 /* String+Extension.swift */,
+				490CAD69241CED3500BCB424 /* UIImage+Extension.swift */,
+				490CAD6B241CF25B00BCB424 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -123,11 +138,11 @@
 		4917129324114F970030EE08 /* ProfileFlow */ = {
 			isa = PBXGroup;
 			children = (
-				498F9D6D2419553A00C47A0D /* Views */,
 				490EB31C23FECDE400055B0C /* ProfileViewController.swift */,
 				493AD29424113D2B0042BBB1 /* Recommendations */,
 				493AD29124113D0F0042BBB1 /* ProfileActivity */,
 				493AD29024113D000042BBB1 /* ProfileShortInfo */,
+				498F9D6D2419553A00C47A0D /* Views */,
 			);
 			path = ProfileFlow;
 			sourceTree = "<group>";
@@ -157,6 +172,7 @@
 		4917F54123FDC46A001DDC5C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				498F9D74241957D300C47A0D /* Details */,
 				4917129324114F970030EE08 /* ProfileFlow */,
 			);
 			path = Scenes;
@@ -237,10 +253,20 @@
 		498F9D6D2419553A00C47A0D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				490CAD67241CEA5F00BCB424 /* GradientView.swift */,
 				498F9D6E2419554F00C47A0D /* DragIndicatorView.swift */,
 				498F9D72241955AD00C47A0D /* CardTitleLabel.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		498F9D74241957D300C47A0D /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				498F9D75241957E200C47A0D /* DetailsViewController.swift */,
+				498F9D77241957EC00C47A0D /* DetailsView.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		4995285E23FDBA6900AE64D7 = {
@@ -372,9 +398,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				490EB32123FECFCD00055B0C /* CardView.swift in Sources */,
+				498F9D76241957E200C47A0D /* DetailsViewController.swift in Sources */,
 				493AD29624113E380042BBB1 /* RecommendationsViewController.swift in Sources */,
 				49E84A1624115C2E005E1A1B /* ActivityTableViewCell.swift in Sources */,
 				493AD28F24113CFB0042BBB1 /* ProfileShortInfoViewController.swift in Sources */,
+				490CAD66241CE83400BCB424 /* String+Extension.swift in Sources */,
+				498F9D78241957EC00C47A0D /* DetailsView.swift in Sources */,
+				490CAD68241CEA5F00BCB424 /* GradientView.swift in Sources */,
 				49E84A13241159AB005E1A1B /* ProfileActivityView.swift in Sources */,
 				4917F54323FDC482001DDC5C /* CardsHolderViewController.swift in Sources */,
 				49E84A1A24118448005E1A1B /* ProgressView.swift in Sources */,
@@ -388,6 +418,8 @@
 				49E84A1824117A0A005E1A1B /* ActivityViewModel.swift in Sources */,
 				498F9D6F2419554F00C47A0D /* DragIndicatorView.swift in Sources */,
 				490EB31D23FECDE400055B0C /* ProfileViewController.swift in Sources */,
+				490CAD6A241CED3500BCB424 /* UIImage+Extension.swift in Sources */,
+				490CAD6C241CF25B00BCB424 /* UIView+Extension.swift in Sources */,
 				4917F54523FDC490001DDC5C /* CardsHolderView.swift in Sources */,
 				493AD28D24113B400042BBB1 /* UIFont+Extension.swift in Sources */,
 				490EB31823FEC26800055B0C /* UIColor+Extension.swift in Sources */,

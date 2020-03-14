@@ -12,6 +12,8 @@ class ProfileActivityViewController: UIViewController {
 
     lazy var customView = view as! ProfileActivityView
     var data = [ActivityViewModel]()
+    var didSelectItem: ((_ item: ActivityViewModel) -> Void)?
+    
     var tableView: UITableView {
         return customView.tableView
     }
@@ -57,6 +59,8 @@ extension ProfileActivityViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        DispatchQueue.main.async {
+            self.didSelectItem?(self.data[indexPath.row])
+        }
     }
 }
