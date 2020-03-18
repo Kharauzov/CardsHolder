@@ -26,6 +26,10 @@ class DetailsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         customView.titleLabel.attributedText = viewModel.title.formattedString(font: UIFont.customFont(ofSize: 20, weight: .bold), textColor: .black, lineHeight: 28, letterSpace: 0.2, alignment: .center)
@@ -35,11 +39,6 @@ class DetailsViewController: UIViewController {
         }
         customView.textView.attributedText = getMockTextViewText().formattedString(font: UIFont.systemFont(ofSize: 16, weight: .regular), textColor: .black, lineHeight: 24, letterSpace: 0.5, alignment: .left)
         customView.dismissButton.addTarget(self, action: #selector(dismissButtonTapped), for: .touchUpInside)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        customView.imageShadowView.addSketchShadow(color: .black, alpha: 0.22, x: 5, y: 0, blur: 12, spread: 4)
     }
     
     private func setupImageContainerView(image: UIImage) {

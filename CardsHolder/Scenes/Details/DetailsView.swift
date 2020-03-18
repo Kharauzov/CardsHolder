@@ -22,11 +22,7 @@ class DetailsView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    let imageShadowView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    var imageShadowView: UIView?
     let imageView: UIImageView = {
         let view = UIImageView()
         view.clipsToBounds = true
@@ -75,10 +71,9 @@ class DetailsView: UIView {
         textView.translatesAutoresizingMaskIntoConstraints = false
         return textView
     }()
-    let dismissButton: UIButton = {
-        let button = UIButton(type: UIButton.ButtonType.roundedRect)
-        button.tintColor = .white
-        button.setImage(#imageLiteral(resourceName: "back"), for: .normal)
+    let dismissButton: DismissButton = {
+        let button = DismissButton(type: UIButton.ButtonType.roundedRect)
+        button.extraTapPadding = 20
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -144,12 +139,6 @@ class DetailsView: UIView {
         NSLayoutConstraint(item: imageView, attribute: .trailing, relatedBy: .equal, toItem: imageContainerView, attribute: .trailing, multiplier: 1.0, constant: -GridLayout.regularSpace
         * 8).isActive = true
         NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: imageView, attribute: .width, multiplier: 1.28, constant: 0).isActive = true
-        
-        imageContainerView.insertSubview(imageShadowView, belowSubview: imageView)
-        NSLayoutConstraint(item: imageShadowView, attribute: .top, relatedBy: .equal, toItem: imageView, attribute: .top, multiplier: 1.0, constant: 30).isActive = true
-        NSLayoutConstraint(item: imageShadowView, attribute: .leading, relatedBy: .equal, toItem: imageView, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: imageShadowView, attribute: .trailing, relatedBy: .equal, toItem: imageView, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: imageShadowView, attribute: .height, relatedBy: .equal, toItem: imageView, attribute: .height, multiplier: 1.0, constant: 0).isActive = true
         
         addSubview(bottomContainerView)
         NSLayoutConstraint(item: bottomContainerView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0.55, constant: 0).isActive = true

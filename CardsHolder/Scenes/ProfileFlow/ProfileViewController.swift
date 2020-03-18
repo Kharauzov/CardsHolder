@@ -17,6 +17,7 @@ class ProfileViewController: CardsHolderViewController {
     var activityViewController: ProfileActivityViewController?
     var recommendationsViewController: RecommendationsViewController?
     var detailsViewPresentingAnimator: DetailsViewPresentingAnimator?
+    var detailsViewDismissingAnimator: DetailsViewDismissingAnimator?
     
     // MARK: Methods
     
@@ -48,6 +49,7 @@ class ProfileViewController: CardsHolderViewController {
     private func showDetailsView(selectedModel: ProfileActivitySelectedViewModel, activityView: UIView) {
         let imageRelativeFrame = view.convert(selectedModel.imageViewParentRelativeFrame, from: activityView)
         detailsViewPresentingAnimator = DetailsViewPresentingAnimator(originImageFrame: imageRelativeFrame, imageView: selectedModel.imageView)
+        detailsViewDismissingAnimator = DetailsViewDismissingAnimator(originImageFrame: imageRelativeFrame, imageView: selectedModel.imageView)
         let viewController = DetailsViewController(viewModel: selectedModel.item)
         viewController.modalPresentationStyle = .custom
         viewController.transitioningDelegate = self
@@ -80,6 +82,6 @@ extension ProfileViewController: UIViewControllerTransitioningDelegate {
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return DetailsViewDismissingAnimator()
+        return detailsViewDismissingAnimator
     }
 }

@@ -29,13 +29,13 @@ class DetailsViewPresentingAnimator: NSObject, UIViewControllerAnimatedTransitio
         guard let presentingView = transitionContext.viewController(forKey: .from)?.view else {
             return
         }
+        imageView.isHidden = true
         presentedView.layoutIfNeeded()
         presentedView.imageContainerView.transform = CGAffineTransform(translationX: 0, y: -presentedView.imageContainerView.frame.height)
         presentedView.bottomContainerView.transform = CGAffineTransform(translationX: 0, y: presentedView.bottomContainerView.frame.height)
         presentedView.backgroundView.alpha = 0
         presentedView.dismissButton.alpha = 0
         presentedView.imageView.isHidden = true
-        presentedView.imageShadowView.isHidden = true
         
         let imageViewSnapshot = UIImageView(image: imageView.image)
         imageViewSnapshot.contentMode = imageView.contentMode
@@ -68,12 +68,16 @@ class DetailsViewPresentingAnimator: NSObject, UIViewControllerAnimatedTransitio
             presentedView.imageContainerView.transform = .identity
         }, completion: { _ in
             imageViewSnapshot.removeFromSuperview()
+            presentedView.imageShadowView = imageShadowView
             presentedView.imageContainerView.insertSubview(imageShadowView, belowSubview: presentedView.imageView)
             presentedView.imageView.isHidden = false
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
         
-        let imageShadowViewNewFrame = presentedView.imageShadowView.frame
+        let imageShadowViewNewFrame = CGRect(x: presentedView.imageView.frame.origin.x,
+                                             y: presentedView.imageView.frame.origin.y + 30,
+                                             width: presentedView.imageView.frame.size.width,
+                                             height: presentedView.imageView.frame.size.height - 30)
         let positionAnimation = CABasicAnimation(keyPath: "position")
         positionAnimation.fromValue = imageShadowView.layer.position
         positionAnimation.toValue = CGPoint(x: imageShadowViewNewFrame.midX, y: imageShadowViewNewFrame.midY)

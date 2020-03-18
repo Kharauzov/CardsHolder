@@ -46,6 +46,7 @@
 		493AD29824113E4A0042BBB1 /* ProfileShortInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD29724113E4A0042BBB1 /* ProfileShortInfoView.swift */; };
 		493AD29B241142170042BBB1 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AD29A241142170042BBB1 /* GridLayout.swift */; };
 		496965C424127580001D2D53 /* ProfileShortInfoAnimationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496965C324127580001D2D53 /* ProfileShortInfoAnimationHandler.swift */; };
+		497931DA24220BB600EB6332 /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497931D924220BB600EB6332 /* DismissButton.swift */; };
 		498F9D6C241953EA00C47A0D /* RecommendationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F9D6B241953EA00C47A0D /* RecommendationsView.swift */; };
 		498F9D6F2419554F00C47A0D /* DragIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F9D6E2419554F00C47A0D /* DragIndicatorView.swift */; };
 		498F9D73241955AD00C47A0D /* CardTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F9D72241955AD00C47A0D /* CardTitleLabel.swift */; };
@@ -101,6 +102,7 @@
 		493AD29724113E4A0042BBB1 /* ProfileShortInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileShortInfoView.swift; sourceTree = "<group>"; };
 		493AD29A241142170042BBB1 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		496965C324127580001D2D53 /* ProfileShortInfoAnimationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileShortInfoAnimationHandler.swift; sourceTree = "<group>"; };
+		497931D924220BB600EB6332 /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
 		498F9D6B241953EA00C47A0D /* RecommendationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsView.swift; sourceTree = "<group>"; };
 		498F9D6E2419554F00C47A0D /* DragIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragIndicatorView.swift; sourceTree = "<group>"; };
 		498F9D72241955AD00C47A0D /* CardTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTitleLabel.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				490CAD6D241D135900BCB424 /* Transition */,
 				498F9D75241957E200C47A0D /* DetailsViewController.swift */,
 				498F9D77241957EC00C47A0D /* DetailsView.swift */,
+				497931D924220BB600EB6332 /* DismissButton.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				49E84A1624115C2E005E1A1B /* ActivityTableViewCell.swift in Sources */,
 				493AD28F24113CFB0042BBB1 /* ProfileShortInfoViewController.swift in Sources */,
 				490CAD70241D137200BCB424 /* DetailsViewPresentingAnimator.swift in Sources */,
+				497931DA24220BB600EB6332 /* DismissButton.swift in Sources */,
 				490CAD66241CE83400BCB424 /* String+Extension.swift in Sources */,
 				498F9D78241957EC00C47A0D /* DetailsView.swift in Sources */,
 				490CAD68241CEA5F00BCB424 /* GradientView.swift in Sources */,
