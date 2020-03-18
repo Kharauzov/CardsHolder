@@ -16,28 +16,41 @@ class ProfileViewController: CardsHolderViewController {
     var topViewController: ProfileShortInfoViewController?
     var activityViewController: ProfileActivityViewController?
     var recommendationsViewController: RecommendationsViewController?
+    var detailsViewPresentingAnimator: DetailsViewPresentingAnimator?
     
     // MARK: Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         didOccurDraggingEvent = { [weak self] value in
-            //debugPrint("\(Date().description) Dragging value \(value)")
             self?.animationHandler?.handleFramesUpdate()
         }
         setChildViewControllers()
-        activityViewController?.didSelectItem = { [unowned self] item in
-            self.showDetailsView(viewModel: item)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if animationHandler == nil {
+            guard let profileShortInfoView = topViewController?.customView,
+                let cardView1 = activityViewController?.view.superview
+                else {
+                return
+            }
+            animationHandler = ProfileShortInfoAnimationHandler(globalView: view, cardView: cardView1, profileShortInfoView: profileShortInfoView)
         }
+        openTopCard(animated: true)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    private func showDetailsView(viewModel: ActivityViewModel) {
-        let viewController = DetailsViewController(viewModel: viewModel)
-        viewController.modalPresentationStyle = .fullScreen
+    private func showDetailsView(selectedModel: ProfileActivitySelectedViewModel, activityView: UIView) {
+        let imageRelativeFrame = view.convert(selectedModel.imageViewParentRelativeFrame, from: activityView)
+        detailsViewPresentingAnimator = DetailsViewPresentingAnimator(originImageFrame: imageRelativeFrame, imageView: selectedModel.imageView)
+        let viewController = DetailsViewController(viewModel: selectedModel.item)
+        viewController.modalPresentationStyle = .custom
+        viewController.transitioningDelegate = self
         present(viewController, animated: true, completion: nil)
     }
     
@@ -52,17 +65,21 @@ class ProfileViewController: CardsHolderViewController {
         self.topViewController = topViewController
         self.activityViewController = card1ViewController
         self.recommendationsViewController = card2ViewController
+        
+        card1ViewController.didSelectItem = { [unowned self] selectedModel in
+            self.showDetailsView(selectedModel: selectedModel, activityView: card1ViewController.view)
+        }
+    }
+}
+
+// MARK: UIViewControllerTransitioning Delegate
+
+extension ProfileViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return detailsViewPresentingAnimator
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if animationHandler == nil {
-            guard let profileShortInfoView = topViewController?.customView,
-                let cardView1 = activityViewController?.view.superview
-                else {
-                return
-            }
-            animationHandler = ProfileShortInfoAnimationHandler(globalView: view, cardView: cardView1, profileShortInfoView: profileShortInfoView)
-        }
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DetailsViewDismissingAnimator()
     }
 }

@@ -46,7 +46,7 @@ class DetailsViewController: UIViewController {
         let averageColor = image.averageColor()
         customView.imageView.image = image
         customView.imageContainerView.firstColor = averageColor
-        customView.imageContainerView.secondColor = averageColor.withAlphaComponent(0.75)
+        customView.imageContainerView.secondColor = averageColor.withAlphaComponent(0)
         customView.imageContainerView.horizontalMode = false
     }
     

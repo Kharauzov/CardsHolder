@@ -12,7 +12,7 @@ class ProfileActivityViewController: UIViewController {
 
     lazy var customView = view as! ProfileActivityView
     var data = [ActivityViewModel]()
-    var didSelectItem: ((_ item: ActivityViewModel) -> Void)?
+    var didSelectItem: ((_ selectedModel: ProfileActivitySelectedViewModel) -> Void)?
     
     var tableView: UITableView {
         return customView.tableView
@@ -59,8 +59,13 @@ extension ProfileActivityViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? ActivityTableViewCell else {
+            return
+        }
+        let imageRelativeFrame = view.convert(cell.coverImageView.frame, from: cell.containerView)
+        let model = ProfileActivitySelectedViewModel(item: data[indexPath.row], imageView: cell.coverImageView, imageViewParentRelativeFrame: imageRelativeFrame)
         DispatchQueue.main.async {
-            self.didSelectItem?(self.data[indexPath.row])
+            self.didSelectItem?(model)
         }
     }
 }

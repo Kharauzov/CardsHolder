@@ -10,6 +10,12 @@ import UIKit
 
 class DetailsView: UIView {
 
+    let backgroundView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     let imageContainerView: GradientView = {
         let view = GradientView()
         view.clipsToBounds = true
@@ -24,13 +30,14 @@ class DetailsView: UIView {
     let imageView: UIImageView = {
         let view = UIImageView()
         view.clipsToBounds = true
-        view.layer.cornerRadius = 12
+        view.layer.cornerRadius = 9
         view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     let bottomContainerView: UIView = {
         let view = UIView()
+        view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -58,6 +65,7 @@ class DetailsView: UIView {
     }()
     let textView: UITextView = {
         let textView = UITextView()
+        textView.isEditable = false
         textView.backgroundColor = .clear
         textView.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         textView.textColor = .black
@@ -69,7 +77,7 @@ class DetailsView: UIView {
     }()
     let dismissButton: UIButton = {
         let button = UIButton(type: UIButton.ButtonType.roundedRect)
-        button.tintColor = .black
+        button.tintColor = .white
         button.setImage(#imageLiteral(resourceName: "back"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -112,16 +120,21 @@ class DetailsView: UIView {
     }
     
     private func initialise() {
-        backgroundColor = .white
+        backgroundColor = .clear
         addSubviews()
     }
     
     private func addSubviews() {
+        addSubview(backgroundView)
+        NSLayoutConstraint(item: backgroundView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: backgroundView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: backgroundView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: backgroundView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
+        
         addSubview(imageContainerView)
         NSLayoutConstraint(item: imageContainerView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0).isActive = true
         NSLayoutConstraint(item: imageContainerView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
         NSLayoutConstraint(item: imageContainerView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true
-        NSLayoutConstraint(item: imageContainerView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0.45, constant: 0).isActive = true
         
         imageContainerView.addSubview(imageView)
         NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: imageContainerView, attribute: .top, multiplier: 1.0, constant: GridLayout.regularSpace
@@ -130,7 +143,7 @@ class DetailsView: UIView {
         * 8).isActive = true
         NSLayoutConstraint(item: imageView, attribute: .trailing, relatedBy: .equal, toItem: imageContainerView, attribute: .trailing, multiplier: 1.0, constant: -GridLayout.regularSpace
         * 8).isActive = true
-        NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: imageContainerView, attribute: .height, multiplier: 0.9, constant: 0).isActive = true
+        NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: imageView, attribute: .width, multiplier: 1.28, constant: 0).isActive = true
         
         imageContainerView.insertSubview(imageShadowView, belowSubview: imageView)
         NSLayoutConstraint(item: imageShadowView, attribute: .top, relatedBy: .equal, toItem: imageView, attribute: .top, multiplier: 1.0, constant: 30).isActive = true
@@ -139,7 +152,8 @@ class DetailsView: UIView {
         NSLayoutConstraint(item: imageShadowView, attribute: .height, relatedBy: .equal, toItem: imageView, attribute: .height, multiplier: 1.0, constant: 0).isActive = true
         
         addSubview(bottomContainerView)
-        NSLayoutConstraint(item: bottomContainerView, attribute: .top, relatedBy: .equal, toItem: imageContainerView, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
+        NSLayoutConstraint(item: bottomContainerView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0.55, constant: 0).isActive = true
+        NSLayoutConstraint(item: bottomContainerView, attribute: .top, relatedBy: .equal, toItem: imageContainerView, attribute: .bottom, multiplier: 1.0, constant: -200).isActive = true
         NSLayoutConstraint(item: bottomContainerView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0).isActive = true
         NSLayoutConstraint(item: bottomContainerView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
         NSLayoutConstraint(item: bottomContainerView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0).isActive = true

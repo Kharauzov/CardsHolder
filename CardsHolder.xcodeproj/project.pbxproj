@@ -11,6 +11,9 @@
 		490CAD68241CEA5F00BCB424 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CAD67241CEA5F00BCB424 /* GradientView.swift */; };
 		490CAD6A241CED3500BCB424 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CAD69241CED3500BCB424 /* UIImage+Extension.swift */; };
 		490CAD6C241CF25B00BCB424 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CAD6B241CF25B00BCB424 /* UIView+Extension.swift */; };
+		490CAD70241D137200BCB424 /* DetailsViewPresentingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CAD6E241D137200BCB424 /* DetailsViewPresentingAnimator.swift */; };
+		490CAD71241D137200BCB424 /* DetailsViewDismissingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CAD6F241D137200BCB424 /* DetailsViewDismissingAnimator.swift */; };
+		490CAD73241D1A2600BCB424 /* ProfileActivitySelectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CAD72241D1A2600BCB424 /* ProfileActivitySelectedViewModel.swift */; };
 		490EB31823FEC26800055B0C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EB31723FEC26800055B0C /* UIColor+Extension.swift */; };
 		490EB31B23FEC33400055B0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490EB31923FEC33400055B0C /* LaunchScreen.storyboard */; };
 		490EB31D23FECDE400055B0C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490EB31C23FECDE400055B0C /* ProfileViewController.swift */; };
@@ -63,6 +66,9 @@
 		490CAD67241CEA5F00BCB424 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		490CAD69241CED3500BCB424 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		490CAD6B241CF25B00BCB424 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		490CAD6E241D137200BCB424 /* DetailsViewPresentingAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewPresentingAnimator.swift; sourceTree = "<group>"; };
+		490CAD6F241D137200BCB424 /* DetailsViewDismissingAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewDismissingAnimator.swift; sourceTree = "<group>"; };
+		490CAD72241D1A2600BCB424 /* ProfileActivitySelectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActivitySelectedViewModel.swift; sourceTree = "<group>"; };
 		490EB31723FEC26800055B0C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		490EB31A23FEC33400055B0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CardsHolder/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		490EB31C23FECDE400055B0C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490CAD6D241D135900BCB424 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				490CAD6E241D137200BCB424 /* DetailsViewPresentingAnimator.swift */,
+				490CAD6F241D137200BCB424 /* DetailsViewDismissingAnimator.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		490EB31623FEC25B00055B0C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +244,7 @@
 				493AD29224113D280042BBB1 /* ProfileActivityViewController.swift */,
 				49E84A12241159AB005E1A1B /* ProfileActivityView.swift */,
 				49E84A1B2411879B005E1A1B /* MockActivityDataFactory.swift */,
+				490CAD72241D1A2600BCB424 /* ProfileActivitySelectedViewModel.swift */,
 			);
 			path = ProfileActivity;
 			sourceTree = "<group>";
@@ -263,6 +279,7 @@
 		498F9D74241957D300C47A0D /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				490CAD6D241D135900BCB424 /* Transition */,
 				498F9D75241957E200C47A0D /* DetailsViewController.swift */,
 				498F9D77241957EC00C47A0D /* DetailsView.swift */,
 			);
@@ -402,6 +419,7 @@
 				493AD29624113E380042BBB1 /* RecommendationsViewController.swift in Sources */,
 				49E84A1624115C2E005E1A1B /* ActivityTableViewCell.swift in Sources */,
 				493AD28F24113CFB0042BBB1 /* ProfileShortInfoViewController.swift in Sources */,
+				490CAD70241D137200BCB424 /* DetailsViewPresentingAnimator.swift in Sources */,
 				490CAD66241CE83400BCB424 /* String+Extension.swift in Sources */,
 				498F9D78241957EC00C47A0D /* DetailsView.swift in Sources */,
 				490CAD68241CEA5F00BCB424 /* GradientView.swift in Sources */,
@@ -411,6 +429,7 @@
 				493AD29324113D280042BBB1 /* ProfileActivityViewController.swift in Sources */,
 				493AD29824113E4A0042BBB1 /* ProfileShortInfoView.swift in Sources */,
 				498F9D73241955AD00C47A0D /* CardTitleLabel.swift in Sources */,
+				490CAD73241D1A2600BCB424 /* ProfileActivitySelectedViewModel.swift in Sources */,
 				493AD29B241142170042BBB1 /* GridLayout.swift in Sources */,
 				496965C424127580001D2D53 /* ProfileShortInfoAnimationHandler.swift in Sources */,
 				4995286B23FDBA6900AE64D7 /* AppDelegate.swift in Sources */,
@@ -418,6 +437,7 @@
 				49E84A1824117A0A005E1A1B /* ActivityViewModel.swift in Sources */,
 				498F9D6F2419554F00C47A0D /* DragIndicatorView.swift in Sources */,
 				490EB31D23FECDE400055B0C /* ProfileViewController.swift in Sources */,
+				490CAD71241D137200BCB424 /* DetailsViewDismissingAnimator.swift in Sources */,
 				490CAD6A241CED3500BCB424 /* UIImage+Extension.swift in Sources */,
 				490CAD6C241CF25B00BCB424 /* UIView+Extension.swift in Sources */,
 				4917F54523FDC490001DDC5C /* CardsHolderView.swift in Sources */,
