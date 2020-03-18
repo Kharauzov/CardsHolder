@@ -39,7 +39,6 @@ class ProfileViewController: CardsHolderViewController {
             }
             animationHandler = ProfileShortInfoAnimationHandler(globalView: view, cardView: cardView1, profileShortInfoView: profileShortInfoView)
         }
-        openTopCard(animated: true)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

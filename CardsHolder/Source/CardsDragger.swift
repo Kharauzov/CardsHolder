@@ -12,9 +12,7 @@ class CardsDragger: NSObject {
     
     // MARK: Private properties
     
-    /// Gesture for cardContainerView1
     private lazy var panGestureRecognizer1 = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizer1Occur))
-    /// Gesture for cardContainerView1
     private lazy var panGestureRecognizer2 = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizer2Occur))
     private var initialCard1Frame: CGRect = .zero
     private var initialCard2Frame: CGRect = .zero

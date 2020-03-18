@@ -13,7 +13,6 @@ class ProfileActivityViewController: UIViewController {
     lazy var customView = view as! ProfileActivityView
     var data = [ActivityViewModel]()
     var didSelectItem: ((_ selectedModel: ProfileActivitySelectedViewModel) -> Void)?
-    
     var tableView: UITableView {
         return customView.tableView
     }
@@ -30,7 +29,7 @@ class ProfileActivityViewController: UIViewController {
         tableView.reloadData()
     }
     
-    func loadData() {
+    private func loadData() {
         data = MockActivityDataFactory().getData()
     }
     
