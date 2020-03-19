@@ -40,7 +40,7 @@ class RecommendationsViewController: UIViewController {
         tableView.register(RecommendedCategoryTableViewCell.self, forCellReuseIdentifier: RecommendedCategoryTableViewCell.description())
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.contentInset.bottom = 64
+        tableView.contentInset.bottom = CardsHolderView.Constants.subviewBottomOffset
     }
     
     private func getChildRecommendedViewController(from category: RecommendedCategory) -> RecommendationsSliderViewController {

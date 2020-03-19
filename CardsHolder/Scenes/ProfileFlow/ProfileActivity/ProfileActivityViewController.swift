@@ -37,6 +37,7 @@ class ProfileActivityViewController: UIViewController {
         tableView.register(ActivityTableViewCell.self, forCellReuseIdentifier: ActivityTableViewCell.description())
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.contentInset.bottom = CardsHolderView.Constants.subviewBottomOffset
     }
 }
 
