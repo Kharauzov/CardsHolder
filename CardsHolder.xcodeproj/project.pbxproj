@@ -282,11 +282,10 @@
 		493AD29124113D0F0042BBB1 /* ProfileActivity */ = {
 			isa = PBXGroup;
 			children = (
+				495AE8D22423F4E300D64A79 /* Model */,
 				49E84A1424115C14005E1A1B /* Cell */,
 				493AD29224113D280042BBB1 /* ProfileActivityViewController.swift */,
 				49E84A12241159AB005E1A1B /* ProfileActivityView.swift */,
-				49E84A1B2411879B005E1A1B /* MockActivityDataFactory.swift */,
-				490CAD72241D1A2600BCB424 /* ProfileActivitySelectedViewModel.swift */,
 			);
 			path = ProfileActivity;
 			sourceTree = "<group>";
@@ -309,6 +308,15 @@
 				493AD29A241142170042BBB1 /* GridLayout.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		495AE8D22423F4E300D64A79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49E84A1B2411879B005E1A1B /* MockActivityDataFactory.swift */,
+				490CAD72241D1A2600BCB424 /* ProfileActivitySelectedViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		498F9D6D2419553A00C47A0D /* Views */ = {
@@ -657,8 +665,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B375T6ZNZC;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/CardsHolder/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -678,8 +686,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B375T6ZNZC;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/CardsHolder/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
