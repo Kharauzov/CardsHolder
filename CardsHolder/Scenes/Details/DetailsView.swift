@@ -54,7 +54,7 @@ class DetailsView: UIView {
     let authorLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
-        label.textColor = UIColor(hexString: "#060518").withAlphaComponent(0.5)
+        label.textColor = UIColor.AppColors.black.withAlphaComponent(0.5)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

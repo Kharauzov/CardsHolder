@@ -20,7 +20,7 @@ class CardTitleLabel: UILabel {
     }
     
     private func initialise() {
-        textColor = UIColor(hexString: "#0C0C0C")
+        textColor = UIColor.AppColors.titleDark
         font = .customFont(ofSize: 20, weight: .bold)
         textAlignment = .left
     }

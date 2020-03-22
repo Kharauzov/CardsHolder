@@ -10,6 +10,16 @@ import Foundation
 import UIKit
 
 extension UIColor {
+    struct AppColors {
+        static let black = UIColor(hexString: "#060518")
+        static let blackSecondary = UIColor(hexString: "#1F232A")
+        static let indicator = UIColor(hexString: "#010101")
+        static let titleDark = UIColor(hexString: "#0C0C0C")
+        static let grey = UIColor(hexString: "#656464")
+        static let green = UIColor(hexString: "#69CA87")
+        static let lightGrey = UIColor(hexString: "#E9E9E9")
+        static let yellow = UIColor(hexString: "#FFCE32")
+    }
     
     /**
      Creates an UIColor from **"#ffffff"** format

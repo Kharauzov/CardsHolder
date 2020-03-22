@@ -20,7 +20,7 @@ class DragIndicatorView: UIView {
     }
     
     private func initialize() {
-        backgroundColor = UIColor(hexString: "#010101").withAlphaComponent(0.5)
+        backgroundColor = UIColor.AppColors.indicator.withAlphaComponent(0.5)
         alpha = 0.3
         layer.cornerRadius = 2.5
     }

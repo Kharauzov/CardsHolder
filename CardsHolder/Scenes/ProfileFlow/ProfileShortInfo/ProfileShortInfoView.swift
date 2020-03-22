@@ -62,7 +62,7 @@ class ProfileShortInfoView: UIView {
     }
     
     private func initialise() {
-        backgroundColor = UIColor(hexString: "#1F232A")
+        backgroundColor = UIColor.AppColors.blackSecondary
         addSubviews()
     }
     

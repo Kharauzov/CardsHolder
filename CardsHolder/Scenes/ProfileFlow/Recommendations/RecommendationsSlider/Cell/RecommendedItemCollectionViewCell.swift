@@ -10,7 +10,7 @@ import UIKit
 
 class RecommendedItemCollectionViewCell: UICollectionViewCell {
     
-    private static let blackTextColor = UIColor(hexString: "#060518")
+    private static let blackTextColor = UIColor.AppColors.black
     
     let coverImageView: UIImageView = {
         let imageView = UIImageView()

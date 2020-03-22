@@ -10,7 +10,7 @@ import UIKit
 
 class ActivityTableViewCell: UITableViewCell {
     
-    private static let blackTextColor = UIColor(hexString: "#060518")
+    private static let blackTextColor = UIColor.AppColors.black
     
     let containerView: UIView = {
         let view = UIView()
@@ -59,7 +59,7 @@ class ActivityTableViewCell: UITableViewCell {
     }()
     let progressLabel: UILabel = {
         let label = UILabel()
-        label.textColor = UIColor(hexString: "#656464")
+        label.textColor = UIColor.AppColors.grey
         label.font = .systemFont(ofSize: 12, weight: .regular)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false

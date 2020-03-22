@@ -13,7 +13,7 @@ class RecommendationsSliderView: UIView {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
-        label.textColor = UIColor(hexString: "#060518")
+        label.textColor = UIColor.AppColors.black
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

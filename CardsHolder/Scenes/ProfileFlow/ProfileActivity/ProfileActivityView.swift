@@ -39,7 +39,7 @@ class ProfileActivityView: UIView {
     }
     
     private func initialise() {
-        backgroundColor = UIColor(hexString: "#FFCE32")
+        backgroundColor = UIColor.AppColors.yellow
         addSubviews()
     }
 

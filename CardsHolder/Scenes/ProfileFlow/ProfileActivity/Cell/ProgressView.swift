@@ -12,7 +12,7 @@ class ProgressView: UIView {
 
     let highlightView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(hexString: "#69CA87")
+        view.backgroundColor = UIColor.AppColors.green
         view.layer.cornerRadius = 3
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -29,7 +29,7 @@ class ProgressView: UIView {
     }
     
     private func initialise() {
-        backgroundColor = UIColor(hexString: "#E9E9E9")
+        backgroundColor = UIColor.AppColors.lightGrey
         layer.cornerRadius = 3
         addSubview(highlightView)
         NSLayoutConstraint(item: highlightView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0).isActive = true
