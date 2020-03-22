@@ -29,8 +29,6 @@ class CardsDragger: NSObject {
     let cardView1: CardView
     let cardView2: CardView
     var didOccurDraggingEvent: ((_ value: CGFloat) -> Void)?
-    private var cardView1FrameObservation: NSKeyValueObservation?
-    private var cardView2FrameObservation: NSKeyValueObservation?
     
     init(view: UIView, cardView1: CardView, cardView2: CardView) {
         self.view = view
@@ -152,7 +150,6 @@ class CardsDragger: NSObject {
         if displayLink != nil { return }
         let displayLink = CADisplayLink(target: self, selector: #selector(animationDidUpdate))
         displayLink.preferredFramesPerSecond = 60
-        
         displayLink.add(to: .current, forMode: .common)
         self.displayLink = displayLink
     }

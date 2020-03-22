@@ -12,10 +12,10 @@ struct MockActivityDataFactory {
     private let titles = [
         "The white raven",
         "Seasons of the storm",
-        "Risoko",
+        "The Rambling",
         "Sorcery of thorns",
         "Goldeline",
-        "The Rambling",
+        "Risoko",
         "Angel and Bavar",
         "Unspoken"
     ]

@@ -44,7 +44,6 @@ struct ProfileShortInfoAnimationHandler {
         let fullDraggingDistance = initialCardViewFrame.origin.y - CardsHolderView.Constants.minCardTopMargin
         let draggedDistance = initialCardViewFrame.origin.y - cardViewFrame.origin.y
         let progress = ((fullDraggingDistance - draggedDistance) / fullDraggingDistance)
-        //debugPrint("progress \(progress)")
         let avatarTotalHeightDelta = avatarImageViewRelativeFrame.size.height - minAvatarHeight
         let avatarSnapshotViewHeight = max((avatarTotalHeightDelta * progress) + minAvatarHeight, minAvatarHeight)
         avatarSnapshotView.frame.size = CGSize(width: avatarSnapshotViewHeight, height: avatarSnapshotViewHeight)

@@ -29,18 +29,9 @@ class CardsHolderView: UIView {
 
     // MARK: Properties
     
-    let topView: UIView = {
-        let view = UIView()
-        return view
-    }()
-    let cardView1: CardView = {
-        let view = CardView()
-        return view
-    }()
-    let cardView2: CardView = {
-        let view = CardView()
-        return view
-    }()
+    let topView = UIView()
+    let cardView1 = CardView()
+    let cardView2 = CardView()
     
     // MARK: Public methods
     
