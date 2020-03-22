@@ -24,7 +24,9 @@ class ProfileViewController: CardsHolderViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         didOccurDraggingEvent = { [weak self] value in
-            self?.animationHandler?.handleFramesUpdate()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
+                self?.animationHandler?.handleFramesUpdate()
+            }
         }
         setChildViewControllers()
     }
