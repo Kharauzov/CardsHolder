@@ -26,6 +26,10 @@ class RecommendationsViewController: UIViewController {
         customView.titleLabel.text = "Recommended"
         setupTableView()
         loadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         tableView.reloadData()
     }
     

@@ -26,6 +26,10 @@ class ProfileActivityViewController: UIViewController {
         customView.titleLabel.text = "Activity"
         setupTableView()
         loadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         tableView.reloadData()
     }
     
