@@ -9,6 +9,8 @@ Please check attached video below, demonstrating how it works.
 * This project contains only pure Swift❤️
 * No third-party frameworks and Pods.
 
+I wrote [an article](https://medium.com/@sergkharauzov/the-power-of-child-viewcontrollers-in-ios-da3d58f5a9fe) on Medium about child view controllers. You can find some code explanations from this project in that article too.
+
 ## Presentation
 <p align="left">
 <img src="https://github.com/Kharauzov/CardsHolder/blob/master/VisualFiles/cards_holder.gif" width="450px" height="338px"/>
