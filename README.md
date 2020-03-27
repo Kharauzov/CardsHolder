@@ -11,6 +11,8 @@ Please check attached video below, demonstrating how it works.
 
 I wrote [an article](https://medium.com/@sergkharauzov/the-power-of-child-viewcontrollers-in-ios-da3d58f5a9fe) on Medium about child view controllers. You can find some code explanations from this project in that article too.
 
+Here is [a shot](https://dribbble.com/shots/10833924-Cards-Holder-iOS-Control) on Dribbble.
+
 ## Presentation
 <p align="left">
 <img src="https://github.com/Kharauzov/CardsHolder/blob/master/VisualFiles/cards_holder.gif" width="450px" height="338px"/>
